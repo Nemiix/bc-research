@@ -22,9 +22,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-    	<groupId>org.web3j</groupId>
-    	<artifactId>core</artifactId>
-    	<version>2.0.0</version>
-    </dependency>
+  		<groupId>org.web3j</groupId>
+  		<artifactId>core</artifactId>
+ 		<version>2.0.2</version>
+	</dependency>
   </dependencies>
 </project>
