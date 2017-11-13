@@ -17,3 +17,9 @@ To start mining with EthMiner, use:
 ```
 ethminer -G -S 127.0.0.1:9009
 ```
+
+Next, you need a wallet for your Ethereum. You will need to download the latest version of Web3j command line tools. Then use:
+
+```
+web3j wallet create
+```
