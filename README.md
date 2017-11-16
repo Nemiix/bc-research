@@ -23,3 +23,8 @@ Next, you need a wallet for your Ethereum. You will need to download the latest 
 ```
 web3j wallet create
 ```
+
+# Smart Contracts
+
+## Setup
+Before launching the code, start testrpc to generate 10 test accounts with virtual currency (no ether requiered).
