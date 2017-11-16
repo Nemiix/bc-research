@@ -1,4 +1,4 @@
-package adesso.Mager.BC_Research.Main;
+package adesso.Mager.BC_Research.FunctionTest;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -27,7 +27,7 @@ public class EtherCounting {
 															.reduce(BigInteger.ZERO, BigInteger::add);
 		
 		Subscription sub = transactionValue.subscribe(total -> {
-			System.out.println("Transaction value: " + Convert.fromWei(new BigDecimal(total), Convert.Unit.ETHER) + " Ether");
+			System.out.println(". Transaction value: " + Convert.fromWei(new BigDecimal(total), Convert.Unit.ETHER) + " Ether");
 			latch.countDown();
 		}, Throwable::printStackTrace);
 		latch.await(10, TimeUnit.MINUTES);

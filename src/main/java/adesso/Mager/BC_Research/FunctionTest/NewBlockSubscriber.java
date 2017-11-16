@@ -1,4 +1,4 @@
-package adesso.Mager.BC_Research.Main;
+package adesso.Mager.BC_Research.FunctionTest;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
