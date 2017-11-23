@@ -98,6 +98,15 @@ deployedContract = Contract.new(['Rama','Nick','Jose'],{data: byteCode, from: we
 contractInstance = Contract.at(deployedContract.address)
 ```
 
-### Code Explanation
+### Compile+Deploy Explanation
 
 First, you have to aquire the web3.js utils to access the blockchain. We read the contract's code and compile it via solc. This creates the bytecode which will be running in the Ethereum VM and the interface for users to access the Contract. With the interface code, we can provide an abi definition, the so called contract template. We deploy the contract by using web3 to create the contract definition and then using Contract.new(). We provide a list of users (the example is a voting contract, so these are the contestants), the compiled bytecode, information about who deployed the contract and a gas amount. This determines how much you are willing to pay the miners to validate your interaction with the blockchain. Finally, we get an instance of ourdeployed contract to further interact with it.
+
+### Accessing the contract 
+
+```
+contractInstance.totalVotesFor.call('Rama').toLocaleString()
+contractInstance.voteForCandidate('Rama', {from: web3.eth.accounts[0]})
+```
+
+After each vote, you will receive a transaction id which is a proof that your transaction occurred.
