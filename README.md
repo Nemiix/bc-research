@@ -1,28 +1,13 @@
 # bc-research
 
 ## Setup
-Before launching the code, start the Parity Ethereum Client (https://github.com/paritytech/parity/releases/tag/v1.8.2/) with the following prompt:
+Before launching the code, start the Geth Ethereum Client (https://geth.ethereum.org/downloads/) with the following prompt:
 
 ```
-parity --chain testnet
+geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal
 ```
 
-To Enable TestNet Mining, follow the tutorial (https://github.com/paritytech/parity/wiki/Mining). To enable mining, start Parity with stratum enabled, using the prompt:
-
-```
-parity --author <YourAccountAdress> --stratum --stratum-interface=0.0.0.0 --stratum-port=9009
-```
-To start mining with EthMiner, use:
-
-```
-ethminer -G -S 127.0.0.1:9009
-```
-
-Next, you need a wallet for your Ethereum. You will need to download the latest version of Web3j command line tools. Then use:
-
-```
-web3j wallet create
-```
+Geth will launch with opening port 8545 while also enabling RPC calls. That allows your Ethereum wallet (https://github.com/ethereum/mist/releases) to connect to and synchronize with the Rinkeby Testnet. With that, you can easily create a wallet for your ether and use your adress to request some start ether at the rinkeby faucet (https://faucet.rinkeby.io/). You simply have to post your adress with a public social network message (i used my Google+-Account).
 
 # Smart Contracts
 
