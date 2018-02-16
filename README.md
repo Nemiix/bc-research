@@ -12,7 +12,7 @@ Geth will launch with opening port 8545 while also enabling RPC calls. That allo
 # Smart Contracts
 
 ## Setup
-Before launching the code, start testrpc to generate 10 test accounts with virtual currency (no ether requiered). To install, follow Medium.com's guide (https://medium.com/@PrateeshNanada/steps-to-install-testrpc-in-windows-10-96989a6cd594)
+Before launching the code, start testrpc to generate 10 test accounts with virtual currency (no ether requiered). To install, follow Medium.com's guide (https://medium.com/@PrateeshNanada/steps-to-install-testrpc-in-windows-10-96989a6cd594). You can also use Ethereum Wallet or any other Ethereum Client.
 
 The Smart Contract is programmed using the language "Solidity". It has to be stored in a ".sol"-file. Our contract example looks like this:
 
@@ -66,7 +66,13 @@ contract Voting {
 }
 ```
 
-To compile and deploy, use the command line, navigate to your contract and run the following code:
+To compile and deploy, use the command line, navigate to your contract and start a node by typing
+
+```
+node
+```
+
+Then, run the following code:
 
 ```
 Web3 = require('web3')
